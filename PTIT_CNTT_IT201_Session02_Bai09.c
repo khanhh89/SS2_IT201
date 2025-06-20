@@ -20,13 +20,18 @@ int main() {
 
 int findNumber(int arr[], int size) {
     int numberMax = arr[0]; //phan tu xuat hien nhieu
+    int counts = 1;
     for (int i = 0; i < size; i++) {
-        int count = 1;
+        int count = 0;
         for (int j = 0; j < size; j++) {
             if (arr[i] == arr[j]) {
                 count++;
             }
         }
+        if (count > counts) {
+            counts = count;
+            numberMax = arr[i];
+        }
     }
-    printf("Phan tu xuat hien nhieu nhat: %d \n", numberMax);
+    printf("Phan tu xuat hien nhieu nhat: %d %d lan\n", numberMax, counts);
 }
