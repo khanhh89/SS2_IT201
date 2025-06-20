@@ -22,6 +22,7 @@ int main() {
     int target = temp;
     int occurrences  = countOccurrences(arr, size, target);
     printf("So lan xuat hien cua %d trong mang la: %d", temp, occurrences );
+    free(arr);
     return 0;
 }
 
