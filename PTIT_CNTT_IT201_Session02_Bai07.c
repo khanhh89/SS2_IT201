@@ -18,6 +18,7 @@ int main() {
     printf("Nhap tong cua cap so can tim: ");
     scanf("%d", &taget);
     searchSum(arr, size, taget);
+    free(arr);
     return 0;
 }
 
