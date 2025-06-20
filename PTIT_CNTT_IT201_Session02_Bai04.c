@@ -25,7 +25,6 @@ int main() {
     scanf("%d", &newValue);
 
     // Cấp phát lại bộ nhớ
-    int *temp = (int*)realloc(arr, (size + 1) * sizeof(int));
     arr = temp;
     int result = modify(arr, size, position, newValue);
     if (result == 0) {
@@ -39,7 +38,7 @@ int main() {
 }
 
 int modify(int arr[], int size, int position, int newValue) {
-    if (position < 0 || position > size) {
+    if (position < 0 || position >= size) {
         printf("Vi tri hoac kich thuoc khong hop le!!!\n");
         return -1; //lỗi
     }
